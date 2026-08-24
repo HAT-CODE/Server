@@ -105,7 +105,7 @@ html, body {
     width: 8px;
     height: 16px;
     background-color: var(--text-color);
-    margin-left: -8px; /* Przyklejamy blisko inputa */
+    margin-left: -8px;
     animation: blink 1s step-end infinite;
 }
 
