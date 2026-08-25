@@ -105,9 +105,10 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 16px;
             outline: none;
-            flex-grow: 1;
             caret-color: transparent;
             min-width: 0;
+            width: 1ch;
+            padding: 0;
         }
 
         #Of {
@@ -115,8 +116,15 @@
             width: 8px;
             height: 18px;
             background-color: var(--O1);
-            margin-left: -8px;
             animation: Og 1s step-end infinite;
+            flex-shrink: 0;
+        }
+
+        .Of-temp {
+            display: inline-block;
+            width: 8px;
+            height: 12px;
+            background-color: var(--O1);
         }
 
         @keyframes Og {
@@ -161,30 +169,30 @@
     <div id="O4">
         <div id="O5">
             <pre class="O6 O7">
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                ⠀⠀⠀⠀          ⠀⠀                    ⠀⠀⠀⠀⠀⣀⣠⣤⠤⠤⠴⠶⠶⠶⠦⠤⠤⠤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀          ⠀                    ⠀⠀⠀⣀⡴⠚⠉⢀⣠⣺⣀⣐⣀⣁⣀⣀⣰⣤⣤⡀⠉⠙⠲⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                ⠀⠀⠀⠀⠀                          ⠀    ⠀⣠⣞⣁⡠⠴⠿⠟⠛⠋⠉⠉⠉⠉⠀⠈⠉⠉⠙⠓⠾⠶⠦⣄⣙⠶⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                ⠀⠀          ⠀                    ⣀⡠⠟⠋⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠉⠙⠻⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                              ⠀⠀⣀⡤⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣴⡶⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠙⠶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                ⠀                              ⢀⣠⠞⢁⣠⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣶⣾⣿⣿⣿⣿⣿⣋⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                              ⠀⢀⡴⠛⢡⢜⡯⠋⠀⠀⠀⠀⠀⠀⢀⣠⣴⣿⡿⣿⡟⠙⣿⣿⣿⣿⢿⣿⣿⣿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⣠⡌⢳⣄⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀                                          ⠀                    ⢀⡴⠋⣠⢞⡕⡣⣲⠄⠀⡶⢒⣤⣠⣴⣿⣿⣿⠟⠁⣿⠀⠀⠹⣿⣿⣿⡆⠻⣿⣿⣿⣿⣿⣦⣒⠀⣀⢦⡀⠤⠀⠈⢧⢙⠻⡆⠙⣧⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀                                                              ⠀⢠⡞⠁⡴⠃⠃⢊⢞⠕⣠⡿⠛⣭⣾⣿⣿⣿⡿⠃⠀⠀⣿⠀⠀⠀⠙⣿⣿⣷⠀⠘⢿⣿⣿⣿⣿⣿⣷⣌⡢⡹⣴⡄⢾⢯⢯⠦⠙⠢⠈⢷⡀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀                                                              ⠀⢠⡿⠀⠀⠀⠀⠀⢠⠎⣠⠟⠀⣾⣿⣿⣿⢻⡿⠁⠀⠀⠀⢻⠀⠀⠀⠀⠈⠻⣿⡆⠀⠀⢻⣿⡟⣿⣿⣿⣿⣿⣿⣾⣿⡋⠋⠁⠀⠀⠀⠀⠀⢻⣄⠀⠀⠀⠀
-⠀⠀⠀⠀⠀                                                              ⠀⢠⡟⠀⠀⠀⠀⠀⠐⠋⠘⠱⢁⣾⣿⣿⡿⢣⣟⣠⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⣤⠄⠒⠻⣿⠘⣿⣿⣿⣆⠘⢌⢻⣧⡠⡄⠀⠀⠀⠀⠀⠀⢻⡄⠀⠀⠀
-⠀⠀⠀⠀⠀                                                              ⢀⡟⢠⢏⣄⣤⣆⠀⢰⣇⠀⠀⣾⣿⣿⣿⠃⡼⠁⠀⠀⠀⠈⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠙⡆⢹⣿⣿⣿⣆⣌⡇⢻⣣⣸⣹⣶⠀⠀⠀⠀⠈⣷⠀⠀⠀
-⠀⠀⠀                                                              ⠀⢀⣿⢀⡿⣿⣼⣽⢹⡄⡏⡏⢹⡾⢿⣿⣿⠏⠀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠘⣆⠀⠀⠀⠀⠀⢀⣠⣤⣦⣤⠀⠀⣿⣿⣿⣿⣿⡻⣏⢫⠇⢧⠋⢳⠀⠘⠀⠀⣿⠀⠀⠀
-⠀⠀⠀                                                              ⠀⣼⡇⡿⢸⢱⢹⢻⢰⣶⢷⣥⠟⠀⠀⣿⣿⠀⠀⢀⣼⠟⠛⠛⢿⡆⠀⠀⠀⣿⡄⠀⠀⠀⠀⡟⠉⠁⠈⠻⣧⠀⢹⣼⣿⡎⠀⠀⠘⢷⣼⣸⡇⡇⠈⢲⢀⠀⣿⠀⠀⠀
-⠀⠀⠀                                                              ⠀⢹⡇⣿⢸⢸⢸⢸⠸⣾⠋⠁⠀⠀⠀⢹⡟⠀⠀⡾⠃⠀⠀⠀⠀⠀⠀⠀⠀⣿⣡⡄⠀⠀⠀⠰⣤⣠⣄⣠⣤⣤⡀⠃⡟⠃⠀⠀⠀⠘⣿⣹⣧⣳⢰⣸⠸⠀⢹⠀⠀⠀
-⠀⠀⠀                                                              ⠀⢸⡇⢹⢸⢸⢺⢟⡇⣾⠆⠀⠀⠀⠀⠀⣧⣠⣖⣦⠔⠀⠀⠀⢀⣀⣀⣠⠤⠤⠤⠤⠤⠤⠤⠤⣤⣈⣃⣀⠉⠙⠿⣠⡏⠀⠀⠀⠀⢠⣿⢃⣟⣟⣟⣟⢆⡀⡟⠀⠀⠀
-⠀⠀⠀                                                              ⠀⠘⣷⠘⡄⣧⣿⠾⠞⢾⠀⠀⠀⠀⠀⠈⢹⡋⠉⣄⣠⢶⡖⠊⠉⠉⠀⠀⠀⢀⣀⣀⣀⡀⠀⠀⠀⠀⠈⠻⠓⣦⠀⣽⡒⡀⠀⠀⠀⣰⠇⢈⣟⡾⣾⣾⡟⣾⠁⠀⠀⠀
-⠀⠀⠀                                                              ⠀⠀⣿⡐⡛⣜⣾⢏⡛⢻⡇⠀⠀⠀⠀⠀⠰⣧⠀⢹⡁⠀⠀⠀⢀⣠⣶⣶⣿⣿⣿⣿⣿⣿⣿⣶⣶⣦⣀⣀⢀⡟⠀⡟⡙⣃⢤⣶⠞⠷⣬⠏⠟⣴⣫⠏⡴⠃⠀⠀⠀⠀
-⠀⠀⠀                                                              ⠀⠘⣷⡻⡝⣾⢮⡙⢮⡇⠀⠀⠀⠀⢀⠀⢾⡆⠈⢧⣀⣠⣾⣿⣟⠿⠋⠀⠀⠉⠉⠁⠈⠙⠻⠿⣿⣿⣶⠟⠀⣸⣩⠾⠿⠋⠉⠱⣤⠈⠻⡮⠟⢁⡼⠁⠀⠀⠀⠀⠀
-⠀⠀⠀⠀                                                              ⠀⠀⠉⢷⡅⠙⠎⠁⠈⢷⣄⠀⠀⠀⢀⠀⣠⢽⡀⠀⠹⢿⡏⢁⣀⣀⣀⠤⠤⠤⠤⠤⠤⠤⢄⣀⢸⡿⢋⣀⣠⣿⠁⠀⠀⠀⠀⠀⡞⡇⢰⣷⡴⠋⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀                                          ⠀                    ⠀⠀⠙⢦⣀⠀⠰⢎⣻⣄⢄⠈⡀⢂⠈⢤⣹⡄⠀⠈⠙⠿⣍⣀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠽⠋⢡⡏⠉⢙⡿⠟⠀⠀⠀⠀⣰⣿⣷⠋⣿⠛⣦⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀                                          ⠀                    ⠀⠀⠀⠉⠓⢦⣀⢀⡙⠷⣄⠲⠉⣣⣋⢱⣿⣶⣄⣀⡀⠈⠉⠙⠒⠒⠒⠒⠒⠉⠉⠁⠠⣶⣏⡀⠀⠈⠀⠀⠀⢀⡀⠀⢽⣹⣿⡀⠙⣦⠼⠶⡀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                              ⠀⠀⠀⠉⢑⣒⣶⣨⠷⢮⣷⣶⣿⣿⡿⠿⢿⢿⣷⣶⣤⣤⣀⣀⣀⣠⣤⢶⣶⢻⣹⣯⣧⣀⣀⣀⡠⠞⠉⠙⠶⠦⡍⢁⣹⠆⣸⠀⠀⢻⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                             ⣀⠴⠖⠋⠁⠉⠀⠀⠀⠁⠀⠈⠹⠷⢤⣿⠀⠈⠻⣿⡿⠙⠩⢉⣿⣿⢹⡎⣆⣏⡿⠶⠿⠛⠁⠀⠀⠀⠀⠀⠀⠑⢌⣀⠿⠿⣀⣤⠞⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                ⠀⠀⠀⠀          ⠀⠀                    ⠀⠀⠀⠀⠀⣀⣠⣤⠤⠤⠴⠶⠶⠶⠦⠤⠤⠤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀          ⠀                    ⠀⠀⠀⣀⡴⠚⠉⢀⣠⣺⣀⣐⣀⣁⣀⣀⣰⣤⣤⡀⠉⠙⠲⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                ⠀⠀⠀⠀⠀                          ⠀    ⠀⣠⣞⣁⡠⠴⠿⠟⠛⠋⠉⠉⠉⠉⠀⠈⠉⠉⠙⠓⠾⠶⠦⣄⣙⠶⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                ⠀⠀          ⠀                    ⣀⡠⠟⠋⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠉⠙⠻⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                              ⠀⠀⣀⡤⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣴⡶⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠙⠶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                ⠀                              ⢀⣠⠞⢁⣠⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣶⣾⣿⣿⣿⣿⣿⣋⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                              ⠀⢀⡴⠛⢡⢜⡯⠋⠀⠀⠀⠀⠀⠀⢀⣠⣴⣿⡿⣿⡟⠙⣿⣿⣿⣿⢿⣿⣿⣿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⣠⡌⢳⣄⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀                                          ⠀                    ⢀⡴⠋⣠⢞⡕⡣⣲⠄⠀⡶⢒⣤⣠⣴⣿⣿⣿⠟⠁⣿⠀⠀⠹⣿⣿⣿⡆⠻⣿⣿⣿⣿⣿⣦⣒⠀⣀⢦⡀⠤⠀⠈⢧⢙⠻⡆⠙⣧⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀                                                              ⠀⢠⡞⠁⡴⠃⠃⢊⢞⠕⣠⡿⠛⣭⣾⣿⣿⣿⡿⠃⠀⠀⣿⠀⠀⠀⠙⣿⣿⣷⠀⠘⢿⣿⣿⣿⣿⣿⣷⣌⡢⡹⣴⡄⢾⢯⢯⠦⠙⠢⠈⢷⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀                                                              ⠀⢠⡿⠀⠀⠀⠀⠀⢠⠎⣠⠟⠀⣾⣿⣿⣿⢻⡿⠁⠀⠀⠀⢻⠀⠀⠀⠀⠈⠻⣿⡆⠀⠀⢻⣿⡟⣿⣿⣿⣿⣿⣿⣾⣿⡋⠋⠁⠀⠀⠀⠀⠀⢻⣄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀                                                              ⠀⢠⡟⠀⠀⠀⠀⠀⠐⠋⠘⠱⢁⣾⣿⣿⡿⢣⣟⣠⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⣤⠄⠒⠻⣿⠘⣿⣿⣿⣆⠘⢌⢻⣧⡠⡄⠀⠀⠀⠀⠀⠀⢻⡄⠀⠀⠀
+⠀⠀⠀⠀⠀                                                              ⢀⡟⢠⢏⣄⣤⣆⠀⢰⣇⠀⠀⣾⣿⣿⣿⠃⡼⠁⠀⠀⠀⠈⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠙⡆⢹⣿⣿⣿⣆⣌⡇⢻⣣⣸⣹⣶⠀⠀⠀⠀⠈⣷⠀⠀⠀
+⠀⠀⠀                                                              ⠀⢀⣿⢀⡿⣿⣼⣽⢹⡄⡏⡏⢹⡾⢿⣿⣿⠏⠀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠘⣆⠀⠀⠀⠀⠀⢀⣠⣤⣦⣤⠀⠀⣿⣿⣿⣿⣿⡻⣏⢫⠇⢧⠋⢳⠀⠘⠀⠀⣿⠀⠀⠀
+⠀⠀⠀                                                              ⠀⣼⡇⡿⢸⢱⢹⢻⢰⣶⢷⣥⠟⠀⠀⣿⣿⠀⠀⢀⣼⠟⠛⠛⢿⡆⠀⠀⠀⣿⡄⠀⠀⠀⠀⡟⠉⠁⠈⠻⣧⠀⢹⣼⣿⡎⠀⠀⠘⢷⣼⣸⡇⡇⠈⢲⢀⠀⣿⠀⠀⠀
+⠀⠀⠀                                                              ⠀⢹⡇⣿⢸⢸⢸⢸⠸⣾⠋⠁⠀⠀⠀⢹⡟⠀⠀⡾⠃⠀⠀⠀⠀⠀⠀⠀⠀⣿⣡⡄⠀⠀⠀⠰⣤⣠⣄⣠⣤⣤⡀⠃⡟⠃⠀⠀⠀⠘⣿⣹⣧⣳⢰⣸⠸⠀⢹⠀⠀⠀
+⠀⠀⠀                                                              ⠀⢸⡇⢹⢸⢸⢺⢟⡇⣾⠆⠀⠀⠀⠀⠀⣧⣠⣖⣦⠔⠀⠀⠀⢀⣀⣀⣠⠤⠤⠤⠤⠤⠤⠤⠤⣤⣈⣃⣀⠉⠙⠿⣠⡏⠀⠀⠀⠀⢠⣿⢃⣟⣟⣟⣟⢆⡀⡟⠀⠀⠀
+⠀⠀⠀                                                              ⠀⠘⣷⠘⡄⣧⣿⠾⠞⢾⠀⠀⠀⠀⠀⠈⢹⡋⠉⣄⣠⢶⡖⠊⠉⠉⠀⠀⠀⢀⣀⣀⣀⡀⠀⠀⠀⠀⠈⠻⠓⣦⠀⣽⡒⡀⠀⠀⠀⣰⠇⢈⣟⡾⣾⣾⡟⣾⠁⠀⠀⠀
+⠀⠀⠀                                                              ⠀⠀⣿⡐⡛⣜⣾⢏⡛⢻⡇⠀⠀⠀⠀⠀⠰⣧⠀⢹⡁⠀⠀⠀⢀⣠⣶⣶⣿⣿⣿⣿⣿⣿⣿⣶⣶⣦⣀⣀⢀⡟⠀⡟⡙⣃⢤⣶⠞⠷⣬⠏⠟⣴⣫⠏⡴⠃⠀⠀⠀⠀
+⠀⠀⠀                                                              ⠀⠘⣷⡻⡝⣾⢮⡙⢮⡇⠀⠀⠀⠀⢀⠀⢾⡆⠈⢧⣀⣠⣾⣿⣟⠿⠋⠀⠀⠉⠉⠁⠈⠙⠻⠿⣿⣿⣶⠟⠀⣸⣩⠾⠿⠋⠉⠱⣤⠈⠻⡮⠟⢁⡼⠁⠀⠀⠀⠀⠀
+⠀⠀⠀⠀                                                              ⠀⠀⠉⢷⡅⠙⠎⠁⠈⢷⣄⠀⠀⠀⢀⠀⣠⢽⡀⠀⠹⢿⡏⢁⣀⣀⣀⠤⠤⠤⠤⠤⠤⠤⢄⣀⢸⡿⢋⣀⣠⣿⠁⠀⠀⠀⠀⠀⡞⡇⢰⣷⡴⠋⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀                                          ⠀                    ⠀⠀⠙⢦⣀⠀⠰⢎⣻⣄⢄⠈⡀⢂⠈⢤⣹⡄⠀⠈⠙⠿⣍⣀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠽⠋⢡⡏⠉⢙⡿⠟⠀⠀⠀⠀⣰⣿⣷⠋⣿⠛⣦⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀                                          ⠀                    ⠀⠀⠀⠉⠓⢦⣀⢀⡙⠷⣄⠲⠉⣣⣋⢱⣿⣶⣄⣀⡀⠈⠉⠙⠒⠒⠒⠒⠒⠉⠉⠁⠠⣶⣏⡀⠀⠈⠀⠀⠀⢀⡀⠀⢽⣹⣿⡀⠙⣦⠼⠶⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                              ⠀⠀⠀⠉⢑⣒⣶⣨⠷⢮⣷⣶⣿⣿⡿⠿⢿⢿⣷⣶⣤⣤⣀⣀⣀⣠⣤⢶⣶⢻⣹⣯⣧⣀⣀⣀⡠⠞⠉⠙⠶⠦⡍⢁⣹⠆⣸⠀⠀⢻⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                             ⣀⠴⠖⠋⠁⠉⠀⠀⠀⠁⠀⠈⠹⠷⢤⣿⠀⠈⠻⣿⡿⠙⠩⢉⣿⣿⢹⡎⣆⣏⡿⠶⠿⠛⠁⠀⠀⠀⠀⠀⠀⠑⢌⣀⠿⠿⣀⣤⠞⠀⠀⠀⠀⠀
 </pre>
 <pre class="O6 O8">
  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 __    __   ______   ________        ______    ______   _______   ________ 
@@ -194,10 +202,10 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 $$    $$ |$$    $$ |   $$ |/      |$$ |      $$ |  $$ |$$ |  $$ |$$    |   
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 $$$$$$$$ |$$$$$$$$ |   $$ |$$$$$$/ $$ |   __ $$ |  $$ |$$ |  $$ |$$$$$/    
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 $$ |  $$ |$$ |  $$ |   $$ |        $$ \__/  |$$ \__$$ |$$ |__$$ |$$ |_____ 
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 $$ |  $$ |$$ |  $$ |   $$ |        $$    $$/ $$    $$/ $$    $$/ $$       |
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 $$ |  $$ |$$ |  $$ |   $$ |        $$    $$/ $$    $$/ $$    $$/ $$      |
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 $$/   $$/ $$/   $$/    $$/          $$$$$$/   $$$$$$/  $$$$$$$/  $$$$$$$$/ 
-                                                                        > Presents
-                                                                                                                                 
+                                                                        > Presents 2026
+                                                                                                                                         
 </pre>
         <div id="O9">
             <div>> HAT-CODE / H_C</div>
@@ -219,23 +227,23 @@
             const O1 = document.getElementById('Ob');
             const O2 = document.getElementById('O5');
             const O3 = {
-                O4: function() {
+                'help': function() {
                     return `Available commands:\n  help      - Displays this list of commands\n  about     - Information about the HAT-CODE project\n  nato      - Displays the NATO graphic\n  clear     - Clears the terminal screen\n  ls        - Lists files in the directory\n  sudo      - Attempts to escalate privileges`
                 },
-                O5: function() {
+                'about': function() {
                     return `HAT-CODE Presents:\nThe 'NATO' project is a visualization within a terminal environment.\nBuilt using pure HTML, CSS, and JS. A minimalist approach.\nJust black, white, and code.`
                 },
-                O6: function() {
+                'nato': function() {
                     return `None.`
                 },
-                O7: function() {
+                'ls': function() {
                     return `index.html   index.css   index.js   README.md   .gitignore`
                 },
-                O8: function() {
+                'clear': function() {
                     O1.innerHTML = '';
                     return null
                 },
-                O9: function() {
+                'sudo': function() {
                     return `User root is not in the sudoers file. This incident will be reported.`
                 }
             };
@@ -256,7 +264,6 @@
                 O1.appendChild(Oe);
                 const Of = cmd.trim().toLowerCase();
                 if (Of === '') {
-                    // do nothing
                 } else if (O3[Of]) {
                     const Og = O3[Of]();
                     if (Og) Oa(Og)
@@ -270,8 +277,13 @@
                 if (event.key === 'Enter') {
                     const Oh = O0.value;
                     Od(Oh);
-                    O0.value = ''
+                    O0.value = '';
+                    O0.style.width = '1ch';
                 }
+            });
+
+            O0.addEventListener('input', function() {
+                O0.style.width = Math.max(1, O0.value.length) + 'ch';
             });
             
             document.addEventListener('click', function(e) {
@@ -279,11 +291,47 @@
                     O0.focus()
                 }
             });
-            
-            setTimeout(() => {
-                Oa("Type 'help' and press Enter to view available commands.", 'Oj');
-                O2.scrollTop = O2.scrollHeight
-            }, 1000);
+
+            const P1 = document.querySelector('.O6.O7');
+            const P2 = document.querySelector('.O6.O8');
+            const T1 = P1.textContent;
+            const T2 = P2.textContent;
+            P1.textContent = '';
+            P2.textContent = '';
+
+            const IL = document.getElementById('Oc');
+            const IM = document.getElementById('O9');
+            IL.style.display = 'none';
+            IM.style.display = 'none';
+
+            async function TY(el, text) {
+                let cur = '';
+                const curEl = document.createElement('span');
+                curEl.className = 'Of-temp';
+                for (let i = 0; i < text.length; i += 6) {
+                    cur += text.substring(i, i + 6);
+                    el.textContent = cur;
+                    el.appendChild(curEl);
+                    if (i % 24 === 0) {
+                        O2.scrollTop = O2.scrollHeight;
+                        await new Promise(r => setTimeout(r, 1));
+                    }
+                }
+                el.textContent = cur;
+            }
+
+            (async function() {
+                await TY(P1, T1);
+                await TY(P2, T2);
+                IM.style.display = 'block';
+                IL.style.display = 'flex';
+                O2.scrollTop = O2.scrollHeight;
+                O0.focus();
+                setTimeout(() => {
+                    Oa("Type 'help' and press Enter to view available commands.", 'Oj');
+                    O2.scrollTop = O2.scrollHeight;
+                }, 1000);
+            })();
         });
     </script>
 </body>
