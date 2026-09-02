@@ -8,7 +8,8 @@
     },
     "@InitializeData": {
         "@InitializeUser": "username",
-        "@InitializePassword": "password"
+        "@InitializePassword": "password",
+        "@Mode": "User"
     },
     "@Url": "https://github.com/HAT-CODE/Server"
 }
