@@ -11,156 +11,37 @@
             --O2: #888888;
             --O3: #CCCCCC;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body {
             background-color: var(--O0);
             color: var(--O1);
             font-family: 'JetBrains Mono', 'Courier New', monospace;
-            height: 100vh;
-            width: 100vw;
-            overflow: hidden;
+            height: 100vh; width: 100vw; overflow: hidden;
         }
-
-        #O4 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 40px 60px;
-        }
-
-        #O5 {
-            flex-grow: 1;
-            overflow-y: auto;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        #O5::-webkit-scrollbar {
-            width: 4px;
-        }
-
-        #O5::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        #O5::-webkit-scrollbar-thumb {
-            background: #333;
-        }
-
-        .O6 {
-            font-size: 12px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .O7 {
-            color: var(--O1);
-        }
-
-        .O8 {
-            color: var(--O1);
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
-
-        #O9 {
-            color: var(--O2);
-            margin-bottom: 20px;
-        }
-
-        #O9 .Oa {
-            color: var(--O1);
-            font-weight: 700;
-        }
-
-        #Ob {
-            margin-top: 10px;
-        }
-
-        #Oc {
-            display: flex;
-            align-items: center;
-            margin-top: 5px;
-        }
-
-        .Od {
-            color: var(--O1);
-            margin-right: 12px;
-            white-space: nowrap;
-            font-weight: 500;
-        }
-
-        #Oe {
-            background: transparent;
-            border: none;
-            color: var(--O1);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 16px;
-            outline: none;
-            caret-color: transparent;
-            min-width: 0;
-            width: 1ch;
-            padding: 0;
-        }
-
-        #Of {
-            display: inline-block;
-            width: 8px;
-            height: 18px;
-            background-color: var(--O1);
-            animation: Og 1s step-end infinite;
-            flex-shrink: 0;
-        }
-
-        .Of-temp {
-            display: inline-block;
-            width: 8px;
-            height: 12px;
-            background-color: var(--O1);
-        }
-
-        @keyframes Og {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        .Oh {
-            margin-bottom: 2px;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-
-        .Oi {
-            color: #FF4444;
-        }
-
-        .Oj {
-            color: var(--O1);
-            font-weight: 500;
-        }
-
+        #O4 { width: 100%; height: 100%; display: flex; flex-direction: column; padding: 40px 60px; }
+        #O5 { flex-grow: 1; overflow-y: auto; font-size: 14px; line-height: 1.6; }
+        #O5::-webkit-scrollbar { width: 4px; }
+        #O5::-webkit-scrollbar-track { background: transparent; }
+        #O5::-webkit-scrollbar-thumb { background: #333; }
+        .O6 { font-size: 12px; line-height: 1.1; margin-bottom: 20px; font-weight: 500; }
+        .O7 { color: var(--O1); }
+        .O8 { color: var(--O1); font-size: 16px; margin-bottom: 30px; }
+        #O9 { color: var(--O2); margin-bottom: 20px; }
+        #O9 .Oa { color: var(--O1); font-weight: 700; }
+        #Ob { margin-top: 10px; }
+        #Oc { display: flex; align-items: center; margin-top: 5px; }
+        .Od { color: var(--O1); margin-right: 12px; white-space: nowrap; font-weight: 500; }
+        #Oe { background: transparent; border: none; color: var(--O1); font-family: 'JetBrains Mono', monospace; font-size: 16px; outline: none; caret-color: transparent; min-width: 0; width: 1ch; padding: 0; }
+        #Of { display: inline-block; width: 8px; height: 18px; background-color: var(--O1); animation: Og 1s step-end infinite; flex-shrink: 0; }
+        .Of-temp { display: inline-block; width: 8px; height: 12px; background-color: var(--O1); }
+        @keyframes Og { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .Oh { margin-bottom: 2px; white-space: pre-wrap; word-wrap: break-word; }
+        .Oi { color: #FF4444; }
+        .Oj { color: var(--O1); font-weight: 500; }
+        .Ok { color: #00FF00; }
         @media screen and (max-width: 768px) {
-            #O4 { padding: 20px 15px; }
-            #O5 { font-size: 13px; }
-            .O6 { font-size: 8px; }
-            .O8 { font-size: 11px; margin-bottom: 20px; }
-            .Od { font-size: 12px; margin-right: 8px; }
-            #Of { height: 16px; }
-        }
-
-        @media screen and (max-width: 380px) {
-            .O6 { font-size: 6px; }
-            .O8 { font-size: 9px; }
-            #O5 { font-size: 12px; }
-            .Od { font-size: 11px; }
+            #O4 { padding: 20px 15px; } #O5 { font-size: 13px; } .O6 { font-size: 8px; }
+            .O8 { font-size: 11px; margin-bottom: 20px; } .Od { font-size: 12px; margin-right: 8px; } #Of { height: 16px; }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -190,11 +71,11 @@
 ⠀⠀⠀                                                              ⠀⠘⣷⡻⡝⣾⢮⡙⢮⡇⠀⠀⠀⠀⢀⠀⢾⡆⠈⢧⣀⣠⣾⣿⣟⠿⠋⠀⠀⠉⠉⠁⠈⠙⠻⠿⣿⣿⣶⠟⠀⣸⣩⠾⠿⠋⠉⠱⣤⠈⠻⡮⠟⢁⡼⠁⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀                                                              ⠀⠀⠉⢷⡅⠙⠎⠁⠈⢷⣄⠀⠀⠀⢀⠀⣠⢽⡀⠀⠹⢿⡏⢁⣀⣀⣀⠤⠤⠤⠤⠤⠤⠤⢄⣀⢸⡿⢋⣀⣠⣿⠁⠀⠀⠀⠀⠀⡞⡇⢰⣷⡴⠋⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀                                          ⠀                    ⠀⠀⠙⢦⣀⠀⠰⢎⣻⣄⢄⠈⡀⢂⠈⢤⣹⡄⠀⠈⠙⠿⣍⣀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠽⠋⢡⡏⠉⢙⡿⠟⠀⠀⠀⠀⣰⣿⣷⠋⣿⠛⣦⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀                                          ⠀                    ⠀⠀⠀⠉⠓⢦⣀⢀⡙⠷⣄⠲⠉⣣⣋⢱⣿⣶⣄⣀⡀⠈⠉⠙⠒⠒⠒⠒⠒⠉⠉⠁⠠⣶⣏⡀⠀⠈⠀⠀⠀⢀⡀⠀⢽⣹⣿⡀⠙⣦⠼⠶⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀                                          ⠀                    ⠀⠀⠀⠉⠓⢦⣀⢀⡙⠷⣄⠲⠉⣣⣋⢱⣿⣶⣄⣀⡀⠈⠉⠙⠒⠒⠒⠒⠉⠉⠁⠠⣶⣏⡀⠀⠈⠀⠀⠀⢀⡀⠀⢽⣹⣿⡀⠙⣦⠼⠶⡀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                              ⠀⠀⠀⠉⢑⣒⣶⣨⠷⢮⣷⣶⣿⣿⡿⠿⢿⢿⣷⣶⣤⣤⣀⣀⣀⣠⣤⢶⣶⢻⣹⣯⣧⣀⣀⣀⡠⠞⠉⠙⠶⠦⡍⢁⣹⠆⣸⠀⠀⢻⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                             ⣀⠴⠖⠋⠁⠉⠀⠀⠀⠁⠀⠈⠹⠷⢤⣿⠀⠈⠻⣿⡿⠙⠩⢉⣿⣿⢹⡎⣆⣏⡿⠶⠿⠛⠁⠀⠀⠀⠀⠀⠀⠑⢌⣀⠿⠿⣀⣤⠞⠀⠀⠀⠀⠀
 </pre>
-<pre class="O6 O8">
+            <pre class="O6 O8">
  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 __    __   ______   ________        ______    ______   _______   ________ 
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 /  |  /  | /      \ /        |      /      \  /      \ /       \ /        |
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 $$ |  $$ |/$$$$$$  |$$$$$$$$/      /$$$$$$  |/$$$$$$  |$$$$$$$  |$$$$$$$$/ 
@@ -207,6 +88,7 @@
                                                                         > Presents 2026
                                                                                                                                          
 </pre>
+        </div>
         <div id="O9">
             <div>> HAT-CODE / H_C</div>
             <div>> Loading boot-text <span class="Oa">DONE</span></div>
@@ -219,33 +101,34 @@
             <input type="text" id="Oe" autofocus autocomplete="off" spellcheck="false">
             <span id="Of"></span>
         </div>
-        </div>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const O0 = document.getElementById('Oe');
             const O1 = document.getElementById('Ob');
             const O2 = document.getElementById('O5');
+            
             const O3 = {
                 'help': function() {
-                    return `Available commands:\n  help      - Displays this list of commands\n  about     - Information about the HAT-CODE project\n  nato      - Displays the NATO graphic\n  clear     - Clears the terminal screen\n  ls        - Lists files in the directory\n  sudo      - Attempts to escalate privileges`
+                    return `Available commands:\n  help      - Displays this list of commands\n  about     - Information about the HAT-CODE project\n  logs      - Fetch latest emulator logs from server\n  clear     - Clears the terminal screen\n  ls        - Lists files in the directory\n  sudo      - Attempts to escalate privileges`;
                 },
                 'about': function() {
-                    return `HAT-CODE Presents:\nThe 'NATO' project is a visualization within a terminal environment.\nBuilt using pure HTML, CSS, and JS. A minimalist approach.\nJust black, white, and code.`
+                    return `HAT-CODE Presents:\nThe 'NATO' project is a visualization within a terminal environment.\nBuilt using pure HTML, CSS, and JS. A minimalist approach.\nJust black, white, and code.`;
                 },
-                'nato': function() {
-                    return `None.`
+                'logs': async function() {
+                    try {
+                        const res = await fetch('/hat-code/api/logs');
+                        if(!res.ok) return 'Failed to fetch logs. Server offline?';
+                        const data = await res.json();
+                        if(data.length === 0) return 'No logs yet.';
+                        let out = '--- LIVE LOGS ---\n';
+                        data.forEach(l => { out += `[${l.timestamp}] [${l.level}] ${l.message}\n`; });
+                        return out;
+                    } catch(e) { return 'Error fetching logs.'; }
                 },
-                'ls': function() {
-                    return `index.html README.md`
-                },
-                'clear': function() {
-                    O1.innerHTML = '';
-                    return null
-                },
-                'sudo': function() {
-                    return `User root is not in the sudoers file. This incident will be reported.`
-                }
+                'ls': function() { return `index.html README.md Emulator_Settings.json`; },
+                'clear': function() { O1.innerHTML = ''; return null; },
+                'sudo': function() { return `User root is not in the sudoers file. This incident will be reported.`; }
             };
             
             function Oa(text, Ob = '') {
@@ -254,7 +137,7 @@
                 Oc.className = `Oh ${Ob}`;
                 Oc.textContent = text;
                 O1.appendChild(Oc);
-                O2.scrollTop = O2.scrollHeight
+                O2.scrollTop = O2.scrollHeight;
             }
             
             function Od(cmd) {
@@ -263,14 +146,16 @@
                 Oe.innerHTML = `<span class="Od">root@hat-code:~#</span> ${cmd}`;
                 O1.appendChild(Oe);
                 const Of = cmd.trim().toLowerCase();
-                if (Of === '') {
-                } else if (O3[Of]) {
+                if (Of === '') return;
+                if (O3[Of]) {
                     const Og = O3[Of]();
-                    if (Og) Oa(Og)
+                    if (Og instanceof Promise) {
+                        Og.then(res => { if(res) Oa(res); O2.scrollTop = O2.scrollHeight; });
+                    } else if (Og) { Oa(Og); }
                 } else {
-                    Oa(`bash: ${Of}: command not found`, 'Oi')
+                    Oa(`bash: ${Of}: command not found`, 'Oi');
                 }
-                O2.scrollTop = O2.scrollHeight
+                O2.scrollTop = O2.scrollHeight;
             }
             
             O0.addEventListener('keydown', function(event) {
@@ -287,9 +172,7 @@
             });
             
             document.addEventListener('click', function(e) {
-                if (window.getSelection().toString() === '') {
-                    O0.focus()
-                }
+                if (window.getSelection().toString() === '') O0.focus();
             });
 
             const P1 = document.querySelector('.O6.O7');
@@ -328,11 +211,20 @@
                 O2.scrollTop = O2.scrollHeight;
                 O0.focus();
                 setTimeout(() => {
-                    Oa("Type 'help' and press Enter to view available commands.", 'Oj');
+                    Oa("Type 'help' and press Enter to view available commands. Type 'logs' to see server logs.", 'Oj');
                     O2.scrollTop = O2.scrollHeight;
                 }, 1000);
+                
+                setInterval(async () => {
+                    try {
+                        const res = await fetch('/hat-code/api/logs');
+                        if(res.ok) {
+                            const data = await res.json();
+                        }
+                    } catch(e) {}
+                }, 5000);
             })();
-        });
+        })();
     </script>
 </body>
 </html>
