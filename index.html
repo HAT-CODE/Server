@@ -163,14 +163,14 @@
                 },
                 'logs': async function() {
                     try {
-                        const res = await fetch('http://127.0.0.1/hat-code/api/logs');
+                        const res = await fetch('https://127.0.0.1/hat-code/api/logs');
                         if(!res.ok) return 'Failed to fetch logs. Server offline?';
                         const data = await res.json();
                         if(data.length === 0) return 'No logs yet.';
                         let out = '--- LIVE LOGS ---\n';
                         data.forEach(l => { out += `[${l.timestamp}] [${l.level}] ${l.message}\n`; });
                         return out;
-                    } catch(e) { return 'Error fetching logs. Is local server running?'; }
+                    } catch(e) { return 'Error fetching logs. Is local server running and certificate accepted?'; }
                 },
                 'ls': function() { return `index.html README.md Emulator_Settings.json`; },
                 'clear': function() { O1.innerHTML = ''; return null; },
@@ -256,9 +256,16 @@
                 IL.style.display = 'flex';
                 O2.scrollTop = O2.scrollHeight;
                 O0.focus();
-                setTimeout(() => {
-                    Oa("Type 'help' and press Enter to view available commands. Type 'logs' to see server logs.", 'Oj');
+                
+                setTimeout(async () => {
+                    Oa("Auto-fetching logs from local server...", 'Oj');
                     O2.scrollTop = O2.scrollHeight;
+                    const logFetcher = O3['logs'];
+                    const logResult = await logFetcher();
+                    if (logResult) {
+                        Oa(logResult, 'Ok');
+                        O2.scrollTop = O2.scrollHeight;
+                    }
                 }, 1000);
                 
                 setInterval(async () => {
@@ -270,7 +277,7 @@
                     } catch(e) {}
                 }, 5000);
             })();
-        })();
+        });
     </script>
 </body>
 </html>
