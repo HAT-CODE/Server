@@ -3,7 +3,7 @@
         "@Create": "@Connected/@GameTag/{game_tag}.hc",
 
          "@GameTag": ["game_tag"],
-                 "@Tag0: "Test_00.pack",
+                 "@Tag0": "Test_00.pack",
                  "@Tag1": "GantgstarNewOrleansIHAVEDOWN.hc",
                  "@Tag2": "ModernCombat5.hc"
     }
