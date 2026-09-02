@@ -1,4 +1,9 @@
 {
-    "@Tag1": "GantgstarNewOrleans.hc",
-    "@Tag2": "ModernCombat5.hc"
+        "@CreateData": {
+        "@Create": "@Connected/@GameTag/{game_tag}.hc",
+
+         "@GameTag": ["game_tag"],
+                 "@Tag1": "GantgstarNewOrleans.hc",
+                 "@Tag2": "ModernCombat5.hc"
+    }
 }
