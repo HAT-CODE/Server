@@ -6,42 +6,86 @@
     <title>hat-code-presents</title>
     <style>
         :root {
-            --O0: #000000;
-            --O1: #FFFFFF;
-            --O2: #888888;
-            --O3: #CCCCCC;
+            --O0: #0a0a0f;
+            --O1: #39ff14;
+            --O2: #64748b;
+            --O3: #f8fafc;
+            --glow: 0 0 10px rgba(57, 255, 20, 0.4), 0 0 20px rgba(57, 255, 20, 0.15);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body {
             background-color: var(--O0);
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(20, 20, 30, 0) 0%, rgba(0, 0, 0, 0.9) 100%),
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 30px 30px, 30px 30px;
             color: var(--O1);
             font-family: 'JetBrains Mono', 'Courier New', monospace;
             height: 100vh; width: 100vw; overflow: hidden;
+            position: relative;
         }
-        #O4 { width: 100%; height: 100%; display: flex; flex-direction: column; padding: 40px 60px; }
-        #O5 { flex-grow: 1; overflow-y: auto; font-size: 14px; line-height: 1.6; }
-        #O5::-webkit-scrollbar { width: 4px; }
-        #O5::-webkit-scrollbar-track { background: transparent; }
-        #O5::-webkit-scrollbar-thumb { background: #333; }
-        .O6 { font-size: 12px; line-height: 1.1; margin-bottom: 20px; font-weight: 500; }
-        .O7 { color: var(--O1); }
-        .O8 { color: var(--O1); font-size: 16px; margin-bottom: 30px; }
-        #O9 { color: var(--O2); margin-bottom: 20px; }
-        #O9 .Oa { color: var(--O1); font-weight: 700; }
-        #Ob { margin-top: 10px; }
-        #Oc { display: flex; align-items: center; margin-top: 5px; }
-        .Od { color: var(--O1); margin-right: 12px; white-space: nowrap; font-weight: 500; }
-        #Oe { background: transparent; border: none; color: var(--O1); font-family: 'JetBrains Mono', monospace; font-size: 16px; outline: none; caret-color: transparent; min-width: 0; width: 1ch; padding: 0; }
-        #Of { display: inline-block; width: 8px; height: 18px; background-color: var(--O1); animation: Og 1s step-end infinite; flex-shrink: 0; }
-        .Of-temp { display: inline-block; width: 8px; height: 12px; background-color: var(--O1); }
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+            pointer-events: none;
+            z-index: 9999;
+        }
+        #O4 { 
+            width: 100%; height: 100%; 
+            display: flex; flex-direction: column; 
+            padding: 3rem 4rem; 
+            position: relative; z-index: 1;
+            text-shadow: var(--glow);
+            overflow-y: auto; overflow-x: hidden;
+        }
+
+        #O4::-webkit-scrollbar { width: 6px; }
+        #O4::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.3); border-radius: 4px; }
+        #O4::-webkit-scrollbar-thumb { background: rgba(57, 255, 20, 0.3); border-radius: 4px; border: 1px solid rgba(57, 255, 20, 0.4); }
+        #O4::-webkit-scrollbar-thumb:hover { background: rgba(57, 255, 20, 0.6); }
+        #O5 {
+            font-size: 15px; line-height: 1.7;
+            padding-right: 15px;
+            flex: none;
+            overflow: visible;
+        }
+        .O6 { font-size: 13px; line-height: 1.15; margin-bottom: 25px; font-weight: 700; letter-spacing: -0.2px; white-space: pre; overflow: visible; flex-shrink: 0; }
+        .O7 { color: var(--O1); opacity: 0.95; }
+        .O8 { color: var(--O3); font-size: 17px; margin-bottom: 35px; text-shadow: 0 0 12px rgba(248, 250, 252, 0.5); white-space: pre; overflow: visible; flex-shrink: 0; }
+        #O9 { color: var(--O2); margin-bottom: 25px; font-size: 14px; text-shadow: none; font-weight: 500; }
+        #O9 .Oa { color: #f59e0b; font-weight: 700; text-shadow: 0 0 10px rgba(245, 158, 11, 0.6); }
+        #Ob { margin-top: 15px; display: flex; flex-direction: column; gap: 6px; }
+        #Oc { 
+            display: flex; align-items: center; margin-top: 15px; 
+            background: rgba(0, 0, 0, 0.4); padding: 10px 15px; flex-shrink: 0; 
+            border-radius: 6px; border-left: 3px solid var(--O1);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+        .Od { color: #ff2a6d; margin-right: 14px; white-space: nowrap; font-weight: 700; text-shadow: 0 0 10px rgba(255, 42, 109, 0.6); }
+        #Oe { 
+            background: transparent; border: none; color: var(--O3); 
+            font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 500; 
+            outline: none; caret-color: transparent; min-width: 0; width: 1ch; padding: 0; 
+            text-shadow: 0 0 8px rgba(248, 250, 252, 0.6); 
+        }
+        #Of { display: inline-block; width: 10px; height: 18px; background-color: var(--O1); box-shadow: var(--glow); animation: Og 1s step-end infinite; flex-shrink: 0; transform: translateY(2px); margin-left: 2px; }
+        .Of-temp { display: inline-block; width: 10px; height: 15px; background-color: var(--O1); box-shadow: var(--glow); margin-left: 2px; }
         @keyframes Og { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-        .Oh { margin-bottom: 2px; white-space: pre-wrap; word-wrap: break-word; }
-        .Oi { color: #FF4444; }
-        .Oj { color: var(--O1); font-weight: 500; }
-        .Ok { color: #00FF00; }
+        .Oh { margin-bottom: 4px; white-space: pre-wrap; word-wrap: break-word; font-weight: 500; }
+        .Oi { color: #ff003c; text-shadow: 0 0 12px rgba(255, 0, 60, 0.6); font-weight: 700; }
+        .Oj { color: #05d9e8; font-weight: 700; text-shadow: 0 0 12px rgba(5, 217, 232, 0.6); }
+        .Ok { color: #01ffc3; text-shadow: 0 0 12px rgba(1, 255, 195, 0.6); }
         @media screen and (max-width: 768px) {
-            #O4 { padding: 20px 15px; } #O5 { font-size: 13px; } .O6 { font-size: 8px; }
-            .O8 { font-size: 11px; margin-bottom: 20px; } .Od { font-size: 12px; margin-right: 8px; } #Of { height: 16px; }
+            #O4 { padding: 1.5rem; }
+            #O5 { font-size: 13px; }
+            .O6 { font-size: 8px; }
+            .O8 { font-size: 11px; margin-bottom: 20px; } 
+            .Od { font-size: 13px; margin-right: 10px; } 
+            #Of { height: 15px; }
+            #Oc { padding: 8px 10px; }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -85,8 +129,7 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 $$ |  $$ |$$ |  $$ |   $$ |        $$ \__/  |$$ \__$$ |$$ |__$$ |$$ |_____ 
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 $$ |  $$ |$$ |  $$ |   $$ |        $$    $$/ $$    $$/ $$    $$/ $$      |
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                 $$/   $$/ $$/   $$/    $$/          $$$$$$/   $$$$$$/  $$$$$$$/  $$$$$$$$/ 
-                                                                        > Presents 2026
-                                                                                                                                         
+                                                                        > Presents 2026                                                                                                                              
 </pre>
         </div>
         <div id="O9">
@@ -106,7 +149,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             const O0 = document.getElementById('Oe');
             const O1 = document.getElementById('Ob');
-            const O2 = document.getElementById('O5');
+            const O2 = document.getElementById('O4');
             
             const O3 = {
                 'help': function() {
@@ -117,14 +160,14 @@
                 },
                 'logs': async function() {
                     try {
-                        const res = await fetch('/hat-code/api/logs');
+                        const res = await fetch('http://127.0.0.1/hat-code/api/logs');
                         if(!res.ok) return 'Failed to fetch logs. Server offline?';
                         const data = await res.json();
                         if(data.length === 0) return 'No logs yet.';
                         let out = '--- LIVE LOGS ---\n';
                         data.forEach(l => { out += `[${l.timestamp}] [${l.level}] ${l.message}\n`; });
                         return out;
-                    } catch(e) { return 'Error fetching logs.'; }
+                    } catch(e) { return 'Error fetching logs. Is local server running?'; }
                 },
                 'ls': function() { return `index.html README.md Emulator_Settings.json`; },
                 'clear': function() { O1.innerHTML = ''; return null; },
@@ -217,7 +260,7 @@
                 
                 setInterval(async () => {
                     try {
-                        const res = await fetch('/hat-code/api/logs');
+                        const res = await fetch('http://127.0.0.1/hat-code/api/logs');
                         if(res.ok) {
                             const data = await res.json();
                         }
