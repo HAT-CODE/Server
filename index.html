@@ -263,7 +263,7 @@
                 
                 setInterval(async () => {
                     try {
-                        const res = await fetch('http://127.0.0.1/hat-code/api/logs');
+                        const res = await fetch('https://127.0.0.1/hat-code/api/logs');
                         if(res.ok) {
                             const data = await res.json();
                         }
