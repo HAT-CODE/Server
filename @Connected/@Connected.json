@@ -1,1 +1,15 @@
 
+{
+    "@AppData": {
+        "@Localization": "AppData\\Local\\@LocalProfile",
+        "@Connected?": "Yes"
+    },
+    "@CreateData": {
+        "Create": "@Connected/Connected_Log.json"
+    },
+    "@InitializeData": {
+        "InitializeUser": "username",
+        "InitializePassword": "password"
+    },
+    "Url": "https://github.com/HAT-CODE/Server"
+}
