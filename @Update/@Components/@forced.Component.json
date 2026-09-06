@@ -1,6 +1,6 @@
 {
     "@Component": "Server.exe",
-    "@ServerResponses": "Server_Certificate/ServerResponses.hc$",
-    "@ServerCertificate": "Server_Responses/ServerCertificate.hc$",
+    "@ServerResponses": "Server_Certificate/ServerCertificate.hc$",
+    "@ServerCertificate": "Server_Responses/ServerResponses.hc$",
     "@SeverStorage": "Server_Storage/ServerStorage.hc$"
 }
